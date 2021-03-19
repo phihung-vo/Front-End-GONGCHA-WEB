@@ -1,0 +1,497 @@
+body{
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: ;
+  font-size: 18px;
+  /* Tạo biến trong CSS */
+  --base: #ee4a6d; 
+  /* Biến lưu trữ mã hex tượng trưng cho màu */
+  overflow-x: hidden;
+}
+/* Giống nhau giữa các Trang */
+.container{
+  margin: 5px 140px;
+  width: 80%;
+  background: url("../img/bg.jpg") no-repeat;
+}
+nav{ 
+  position: relative;
+  height: 150px;
+  display: flex;
+  /* background: rosybrown; */
+}
+nav .logo{
+  width: 115px;
+  height: 150px;
+  margin: 0 10px;
+  transform: scale(.7);
+}
+nav .logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 5px 10px;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 60%;
+  font-size: 1.2em;
+  letter-spacing: .5px;
+}
+nav ul li{
+  display: inline-block;
+  margin: 10px 15px;
+  width: 140px;
+  height: 30px;
+  position: relative;
+  transition: 0.5s ;
+}
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+nav ul .i{
+  width: 30px;
+  height: 25px;
+  margin: 15px;
+}
+nav ul .i img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+nav ul li .popup{
+  transition: 0.2s ;
+  opacity: 0;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 50px;
+  left: -100px;
+  color: var(--base);
+  background: white;
+  height: 180px;
+  width: 300px;
+  padding: 0;
+  box-sizing: border-box;
+  /* border-bottom: 5px solid var(--base); */
+
+}
+nav ul li:hover .popup{
+  /* display: block; */
+  opacity: 1;
+}
+nav ul li .popup li{
+  border-top: 2px solid var(--base);
+  width: 90%;
+  text-align: center;
+  margin: 50px 15x;
+  padding: 0;
+}
+nav .search{
+  position: absolute;
+  top: 70px;
+  right: 100px;
+}
+nav .search img{
+  width: 50%;
+}
+nav .search::before{
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  z-index: -1;
+  background: var(--base);
+}
+footer{
+  /* background: rgba(206, 99, 111, 0.322); */
+  width: 100%;
+}
+footer .bar{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 143px;
+}
+footer .bar .left{
+  padding: 10px 20px ;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: calc(100%-20px);
+  font-size: 15px;
+  color: white;
+  background: #724949;
+}
+footer .bar .left img{
+  width: 360px;
+}
+footer .bar .right{
+  width: calc(100% - 400px);
+  height: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: gray;
+  position: relative;
+}
+footer .bar .right .infor{
+  position: absolute;
+  top: 30px;
+  right: 140px;
+  color: var(--base);
+}
+footer .bar .right span{
+  position: absolute;
+  top: 30px;
+  right: 350px;
+  font-weight: bolder;
+}
+/* Kết thúc phần giống nhau */
+
+/* Phần khác nhau giữa các trang */
+/* Trang chủ: #home */
+/* Giới thiệu: #about */
+/* Thực đơn: #menu */
+/* Liên hệ: contact */
+
+
+/* Định dạng phần trang chủ #home =====================================*/
+#home{
+  width: 100%;
+  /* overflow: hidden; */
+  position: relative;
+  margin: 10px 0;
+}
+#home .banner{
+  width: 100%;
+  height: 500px;
+  margin-bottom: 50px; 
+}
+#home .banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#home .homecontent{
+  width: 80%;
+  margin: 0 auto;
+}
+#home .homecontent h1, 
+#home .homecontent h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+#home .homecontent h1{
+  font-size: 2.5em;
+}
+#home .homecontent h3{
+  color: gray;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+#home .homecontent .visual{
+  width: 100%;
+  position: relative;
+  margin: 50px 0;
+  height: 500px;
+  padding: 0 25px;
+  /* border: 5px solid var(--base); */
+}
+#home .homecontent .visual .text{
+  width: 55%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  margin: 20px 30px;
+}
+#home .homecontent .visual .text h2{
+  color: var(--base);
+  font-weight: 500;
+  font-size: 1.8em;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  font-family: serif;
+}
+#home .homecontent .visual .text p{
+  margin: 0 10px;
+  color: rgb(116, 110, 110);
+  letter-spacing: .8px;
+  font-size: .9em;
+}
+#home .homecontent .visual .cup{
+  width: 30%;
+  height: 100%;
+  margin: 2% 0;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(-25deg) scale(.8);
+}
+#home .homecontent .visual .crossimg{
+  position: absolute;
+  top: 60%;
+  left: -40%;
+  z-index: -1;
+  transform: translateY(-50%) scale(.9);
+  height: 50%;
+}
+#home .homecontent .visual .crossimg img{
+  /* width: 100%; */
+  height: 100%;
+}
+#home .homecontent .visual a{
+  position: absolute;
+  color: white;
+  bottom: 0;
+  right:0;
+  text-decoration: none;
+  padding: 20px;
+  background: var(--base);
+}
+#home .homecontent .find{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  margin: 100px 50px;
+  background: var(--base);
+}
+#home .homecontent .find img{
+  width: 64%;
+  object-fit: cover;
+}
+#home .homecontent .find .text{
+  color: white;
+  padding: 20px 50px 40px 40px;
+  font-size: .9em;
+  font-weight: 300;
+}
+#home .homecontent .find .inline-help{
+  margin-left: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .homecontent .find input{
+  width: 200px;
+  border-radius: 20px;
+  border:none;
+  height: 38px;
+  padding: 0 10px;
+  margin: 30px 10px;
+  position: relative;
+}
+#home .homecontent .find .inline-help img{
+  width: 25px;
+  height: 25px;
+  /* position: absolute; */
+}
+
+
+/* Định dạng phần giới thiệu #about =====================================*/
+
+#about .banner{
+  margin-left: -140px;
+  margin-right: -180px;
+  position: relative;
+  color: white;
+  height: 400px;
+}
+#about .banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.7);
+}
+#about .banner .text{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
+#about .banner .text h1{
+  font-weight: 500;
+  font-size: 2.5em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#about .banner .text h3{
+  color: gainsboro;
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+#about .box{
+  width: 55%;
+  margin: 50px 50px 100px ;
+  position: relative;
+}
+#about .box h2{
+  color: var(--base);
+  text-transform: uppercase;
+}
+#about .box p{
+  line-height: 1.6em;
+  letter-spacing: .5px;
+  color: rgb(39, 38, 38);
+  padding: 0 20px;
+}
+#about .box img{
+  position: absolute;
+  top: -15%;
+  right: -70%;
+}
+/* Xài lại định dạng banner của #about */
+/* Định dạng phần Liên hệ #contact =====================================*/
+#about #contact{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#contact form{
+  padding: 1.6em;
+  font-size: 1.2em;
+}
+#contact form p{
+  letter-spacing: .9px;
+  color: rgb(58, 56, 56);
+  /* font-size: 21px; */
+}
+#contact form input{
+  width: 400px;
+  height: 40px;
+  font-size: .9em;
+  margin: 10px 0;
+  padding: 0 10px;
+  /* border-radius: 10px; */
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--base);
+}
+#contact form input::placeholder{
+  color: var(--base);
+}
+#contact form textarea{
+  width: 415px;
+  padding: 10px;
+  margin: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border: 1px solid var(--base);
+}
+#contact form textarea::placeholder{
+  color: var(--base);
+}
+#contact form span{
+  font-size: .9em;
+  color: var(--base);
+  font-weight: bold;
+  margin: 10px;
+}
+#contact form button{
+  background: var(--base);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 21px;
+  color: white;
+  text-transform: uppercase;
+}
+#contact .ourrespon{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 33%;
+  margin: 0;
+  border: 5px solid var(--base);
+  padding: 20px;
+}
+#contact .ourrespon h1{
+  color: var(--base);
+}
+#contact .ourrespon p{
+  line-height: 1.5em;
+  letter-spacing: 1.5px;
+  font-size: .8em;
+  font-weight: 500;
+  color: rgba(0,0,0,.8);
+}
+
+/* Xài lại định dạng banner của #about */
+/* Định dạng phần Liên hệ #menu =====================================*/
+
+#menu {
+  position: relative;
+  margin: 20px 0 ;
+  display: flex;
+}
+#menu .box{
+  width: 550px;
+  /* border: 4px solid black; */
+  font-weight: 500;
+  padding: 20px 10px;
+  /* border: 2px solid var(--base); */
+  /* border-left: 10px solid var(--base); */
+}
+
+#menu .box:nth-child(1){
+  border-left: 10px solid var(--base);
+}
+#menu .box:nth-child(2){
+  border-left: 10px solid rgb(173, 44, 87);
+}
+#menu .box:nth-child(3){
+  border-left: 10px solid rgb(216, 89, 38);
+}
+
+#menu .box .title{
+  color: var(--base);
+  display: flex;
+  position: relative;
+  padding: 0 30px;
+  height: 30px;
+  /* background: black; */
+}
+#menu .box .title img{
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+#menu .box .content{
+  padding: 0 5px;
+}
+#menu .box .content .item{
+  display: flex;
+  position: relative;
+  margin: 40px 10px;
+  width: 100%;
+  /* padding: 10px 0 ; */
+  height: 40px;
+}
+#menu .box .content .item .itemimg{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  transform: scale(1);
+  transition: 0.4s;
+  border: 2px solid var(--base);
+  border-radius: 50%;
+}
+#menu .box .content .item:hover .itemimg{
+  transform: scale(1.4);
+  /* border: none; */
+  background: #C52033;
+}
